@@ -14,7 +14,7 @@ Protocol A is come up with last year,but it wasn't transformed into reality till
  
  For the commands **download** and **upload**:
  
- -The host tries to open the file needed.If not found,the request will be refused(download).The host tries to open the file mentioned in the command,to check if the filename contradicts.If do,the request will be refused.
+ - The host tries to open the file needed.If not found,the request will be refused(download).The host tries to open the file mentioned in the command,to check if the filename contradicts.If do,the request will be refused.
  - After these checks,the host and the client exchanges critical information(The size of the file).
  - Transportation begins.The side receiving data will send the other side a request byte.When the sender receives thr byte,it will send off the data and wait for the next turn.
  - In uploading process,the host will update the file list. 
