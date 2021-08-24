@@ -28,4 +28,4 @@ Protocol A is come up with last year,but it wasn't transformed into reality till
  Such structure makes it simple to build up an inner network.But about public service......I haven't consider it,though.
  After some torturing time,I finally got to login Github,and I spend quite a long time understanding the functions because my English vocabulary on IT is poor.**Support is welcome!Protocol B and C is on the way.**
  
- **The version A0.0.1 will be released on 2021-8-24 10:00(Beijing Time).A0.0.0 is once on the schedule,but it's unusable and now abandoned.**
+ **The version A0.0.1 will be released on 2021-8-24 10:00(Beijing Time).A0.0.0 was once on the schedule,but it's unusable and now abandoned.**
