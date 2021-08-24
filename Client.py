@@ -12,22 +12,22 @@ while True:
             cmd=cmd.split(' ')
             break
     if cmd[0] not in command:
-        print('非法指令。')
+        print('Error:Invalid command')
         continue
     else:
         if cmd[0]=='list' or cmd[0]=='quit' or cmd[0]=='logout':
             if len(cmd)!=1:
-                print('list,quit,logout指令不需要关键字。')
+                print('Error:list,quit and logout don\'t need any arguments!')
                 continue
         elif cmd[0]=='upload' or cmd[0]=='download' or cmd[0]=='login':
             if len(cmd)!=2:
-                print('upload,download,login指令应有且仅有一个关键字。')
+                print('Error:upload,download and login need and only need one argument!')
                 continue
             elif cmd[0]=='upload':
                 try:
                     f=open(cmd[1],'rb')
                 except:
-                    print('找不到文件。请将该文件放置在与程序的同一目录下。')
+                    print('File not found!The file needed to be transported should be pout under the same directory with the client!')
                     continue
     if cmd[0]=='quit':
         print(
@@ -47,7 +47,7 @@ while True:
         try:
             s.connect((name,1024))
         except:
-            print('这个主机名是非法的。请重试。')
+            print('Invalid host name.Try again.')
         else:
             s.close()
             loginstate=1
@@ -56,7 +56,7 @@ while True:
         loginstate=0
     else:
         if loginstate==0:
-            print('还未登录任何主机！')
+            print('You haven\'t log in to any host!')
             continue
         s=socket.socket()
         s.connect((name,1024))
@@ -85,10 +85,9 @@ while True:
                 if state:
                     break
             if state==b'FNF':
-                print('找不到文件。可输入list指令来检查。')
+                print('File not found.You can type list to check.')
             else:
-                print('已删除'+cmd[1]+'。')
-                ###
+                print(cmd[1],'have been deleted.')
         elif cmd[0]=='upload':
             while True:
                 state=s.recv(1024)
@@ -120,7 +119,7 @@ while True:
                         print(round(donesize/1024/(d-d0).total_seconds(),2),'KB/s         ',donesize/allsize*100,'%')
                 f.close()
             else:
-                print('文件名重复。可输入list指令来检查。')
+                print('File name repeated.You can enter list to check.')
         elif cmd[0]=='download':
             d0=datetime.datetime.now()
             d=datetime.datetime.now()
@@ -149,5 +148,5 @@ while True:
                         print(round(donesize/1024/(d-d0).total_seconds(),2),'KB/s         ',donesize/allsize*100,'%')
                 f.close()
             else:
-                print('找不到文件。可输入list指令来检查。')
+                print('File not found.You can type list to check.')
         s.close()
