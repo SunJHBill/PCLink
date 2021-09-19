@@ -1,2 +1,0 @@
-commands:list,quit,logout,help,history,clhis,upload,download,login,del
-notifications:不是一个合法指令。,关键字非法。（个数不为0）,关键字非法。（个数不为1）,找不到文件。请将该文件放置在与程序的同一目录下。,连接失败,已成功连接到,主机,还未登录任何主机！,找不到文件。可输入list指令来检查。,已删除,文件名重复。可输入list指令来检查。
